@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+  <link rel="Stylesheet" href="style.css">
+</head>
+<body>
+  <label id ="label1"></label><br><br>
+  
+  <label id="min">min : </label>
+  <input id="text1"><br><br>
+
+  <label id="max">max : </label>
+  <input id="text2"><br><br>
+
+  <button id="mybutton" >Roll</button><br><br>
+  
+  
+
+  
+
+
+  <script>
+   const mybutton = document.getElementById('mybutton');
+   const label1 = document.getElementById('label1');
+   const text1 = document.getElementById('text1');
+   const text2 = document.getElementById('text2');
+
+   
+
+   mybutton.onclick = function(){
+    const max = parseInt(text2.value);
+    const min = parseInt(text1.value);
+    randomnumber = Math.floor(Math.random() * max) + min;
+
+    label1.textContent = randomnumber;
+   }
+
+  </script>
+</body>
+</html>
